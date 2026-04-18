@@ -6,7 +6,7 @@ I am a working professional in DevOps field already.
 
 ## Learn phase 1:
     Linux/ Shell/ GitHub/ GitLab/ Jira/ Docker
-
+    
 ## Do certification 
      AB 900/ AI 900 [update on Linkedin/ Microsoft account/ Inform Project manager/ RM]
 
