@@ -148,6 +148,3 @@
 - **cron**: Schedule recurring tasks with cron jobs
 - **env**: Show environment variables
   - note: exported variables disappear when the shell exits unless saved in `~/.bashrc`
-
-
-
