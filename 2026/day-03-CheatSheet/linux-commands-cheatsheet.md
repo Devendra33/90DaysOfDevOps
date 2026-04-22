@@ -108,6 +108,10 @@
 - Install a package on Ubuntu/Debian:
   - `sudo apt-get update`
   - `sudo apt-get install docker.io`
+
+- Un-install/Remove a package on Ubuntu/Debian:
+  - `sudo apt-get remove`
+
 - On Red Hat-based systems use `rpm` / `dnf`
 - On CentOS use `yum`
 - Check the Linux distribution:
@@ -126,8 +130,10 @@
 - **kill**: Terminate a process
   - example: `kill <PID>`
   - force kill: `kill -9 <PID>`
+
 - **free -h**: Show memory usage
 - **df -h**: Show disk usage in human-readable format
+- **lsblk**: List all the storage block present/ Attached to VM.
 
 ### Networking
 - **ssh**: Connect to a remote host
