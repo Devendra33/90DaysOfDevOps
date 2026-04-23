@@ -7,6 +7,7 @@
 - **which**: Show the path of the command being used
 - **shutdown**: Turn off the server
 - **reboot**: Restart the server
+- **sudo su**: To switch to Root user
 
 ### File System
 - **ls**: List files and folders in the current working directory (`pwd`)
