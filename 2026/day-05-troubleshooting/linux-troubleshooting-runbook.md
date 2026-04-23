@@ -35,4 +35,9 @@ if found high then see which process taking more memory if not important process
 
 ![alt text](image-2.png)
 
+### Logging
 
+ - journalctl -u (servicename)
+ - tail -n 50 /var/log/file.log
+
+![alt text](image-3.png)
