@@ -14,9 +14,9 @@
 ### Check computer health
  - **df -h** (check the harddisk storage)
 if found high then see which file contains more space using find command/ ls -alt
-sudo find / -size +10M (show file name whose size is greater than 10MB)
-sudo find / -size -10M (show file name whose size is less than 10MB)
-sudo du -ah | sort -rh | head -n 10 (gives top 10 biggest file/ folder on the Vm)
+**sudo find / -size +10M** (show file name whose size is greater than 10MB)
+**sudo find / -size -10M** (show file name whose size is less than 10MB)
+**sudo du -ah | sort -rh | head -n 10** (gives top 10 biggest file/ folder on the Vm)
 
  - **free -h** (check the memory)
 if found high then see which process taking more memory if not important process then kill it
@@ -37,7 +37,7 @@ if found high then see which process taking more memory if not important process
 
 ### Logging
 
- - journalctl -u (servicename)
- - tail -n 50 /var/log/file.log
+ - **journalctl -u (servicename)**
+ - **tail -n 50 /var/log/file.log**
 
 ![alt text](image-3.png)
