@@ -11,7 +11,7 @@
 
 ### File System
 - **ls**: List files and folders in the current working directory (`pwd`)
-  - pro tip: use `ls -al` for a detailed view
+  - pro tip: use `ls -al` for a detailed view and ls (foldername) -R to view folder recursively.
 - **cd**: Change directories
 - **mkdir**: Create a directory
   - pro tips:
