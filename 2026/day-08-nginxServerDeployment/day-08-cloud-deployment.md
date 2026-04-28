@@ -42,7 +42,7 @@ The nginx log file was saved on the VM at:
 - `/home/ubuntu/nginx-logs.txt`
 
 Switch to the local machine terminal and run `scp` (secure copy):
-
+**Syntax** scp -i (private-key) (source) (destination)
 ```bash
 scp -i <privatekey> user@remote_ip:/path/to/remote/file /path/to/local/destination
 ```
