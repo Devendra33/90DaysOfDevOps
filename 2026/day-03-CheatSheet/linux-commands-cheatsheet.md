@@ -2,7 +2,7 @@
 
 ### Daily usage
 - **man**: Help system for each command
-- **hostname**: Show the server name
+- **hostname**: Show the server name (**hostname -i** shows the server private ip)
 - **whoami**: Show the current user
 - **which**: Show the path of the command being used
 - **shutdown**: Turn off the server
@@ -86,9 +86,11 @@
   - pro tip: `cat /etc/gshadow` to view encrypted group data
 
 ### Find and Search
-- **grep**: Global Regular Expression Print
+- **grep**: Global Regular Expression Print - use to find the words in the file
   - pro tip: use `-i` for case-insensitive search
+  - pro tip: use `-r` for finding word inside folder recursively
   - examples:
+    - `sudo grep -ir Devendra /home`   (gives the path of file in which devendra is present)
     - `grep -i devendra /etc/passwd`
     - `grep -i devendra /etc/passwd /etc/gpasswd`
     - `grep -r devendra /`
@@ -104,6 +106,16 @@
     - `find / -group ubuntu`
     - `find /tmp -size -10M`
     - `find /tmp -size +10M`
+
+ - **awk**: it is used to view the file in a column wise manner using a deliminator.
+    - `awk -F. '{print $1 $2}' dum.log` (-F. means . is the deliminator, $1 means print 1st column)
+    - `awk '/error/ {print $0}' logs.txt` (Prints every line containing the word "error")
+    - `awk '{sum += $2} END {print sum}' data.csv` (Adds all values in the second column and prints the total at the end.)
+    - `awk '!seen[$0]++' file.txt` (Filters out all duplicate lines from the input)
+
+ - **sed**: it is used replace text in the file. use -i for replacing case insensitively
+    - `sed -i 's/debug/dev/g' dum.log`       
+    - explaination -  s/ means 'string search', find debug word and replace it with dev. /g means replace it globally.
 
 ### Process and Service Management
 - Install a package on Ubuntu/Debian:
@@ -141,9 +153,12 @@
   - example: `ssh -i <privatekey> user@publicdomain`
   - note: remote public keys are stored in `~/.ssh/authorized_keys`
 - **ifconfig**: Show network interfaces and IP addresses
+- **curl ifconfig.me**: Show public ip address of the server
 - **netstat -tuln**: Show listening services and ports
 - **nmcli**: NetworkManager CLI
   - example: `nmcli con show`
+- **curl** - we can hit APIs/ urls and gives the response. -X is used to send the GET/POST Requests.
+- **wget** - used to down file from web. examples photos, files, etc.
 
 ### Automation
 - **cron**: Schedule recurring tasks with cron jobs
