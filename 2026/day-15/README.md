@@ -1,9 +1,13 @@
 # Day 15 – Networking Concepts: DNS, IP, Subnets & Ports
 
-## Task
+## Overview
+
 Build on Day 14 by understanding the building blocks of networking every DevOps engineer must know.
 
-You will:
+### Learning Objectives
+
+By the end of this day, you will:
+
 - Understand how **DNS** resolves names to IPs
 - Learn **IP addressing** (IPv4, public vs private)
 - Break down **CIDR notation** and **subnetting** basics
@@ -14,34 +18,71 @@ This is concept-focused — research, understand, and document in your own words
 ---
 
 ## Expected Output
-- A markdown file: `day-15-networking-concepts.md`
+
+You will create: `day-15-networking-concepts.md`
 
 ---
 
 ## Challenge Tasks
 
 ### Task 1: DNS – How Names Become IPs
+
+Understand the DNS resolution process and record types.
+
+**Questions:**
+
 1. Explain in 3–4 lines: what happens when you type `google.com` in a browser?
-2. What are these record types? Write one line each:
-   - `A`, `AAAA`, `CNAME`, `MX`, `NS`
-3. Run: `dig google.com` — identify the A record and TTL from the output
+2. What are these DNS record types? Write one line each:
+   - `A` — 
+   - `AAAA` — 
+   - `CNAME` — 
+   - `MX` — 
+   - `NS` — 
+
+**Hands-On:**
+
+Run the following command and identify the A record and TTL:
+```bash
+dig google.com
+```
 
 ---
 
 ### Task 2: IP Addressing
+
+Understand the fundamentals of IPv4 addressing and public vs. private IPs.
+
+**Questions:**
+
 1. What is an IPv4 address? How is it structured? (e.g., `192.168.1.10`)
-2. Difference between **public** and **private** IPs — give one example of each
-3. What are the private IP ranges?
-   - `10.x.x.x`, `172.16.x.x – 172.31.x.x`, `192.168.x.x`
-4. Run: `ip addr show` — identify which of your IPs are private
+2. What is the difference between **public** and **private** IPs? Provide one example of each.
+3. What are the standardized private IP ranges?
+   - `10.x.x.x`
+   - `172.16.x.x – 172.31.x.x`
+   - `192.168.x.x`
+
+**Hands-On:**
+
+Run the following command and identify which of your IPs are private:
+```bash
+ip addr show
+```
 
 ---
 
 ### Task 3: CIDR & Subnetting
+
+Learn CIDR notation and how subnetting works in networking.
+
+**Questions:**
+
 1. What does `/24` mean in `192.168.1.0/24`?
 2. How many usable hosts in a `/24`? A `/16`? A `/28`?
 3. Explain in your own words: why do we subnet?
-4. Quick exercise — fill in:
+
+**Exercise:**
+
+Fill in the following CIDR reference table:
 
 | CIDR | Subnet Mask | Total IPs | Usable Hosts |
 |------|-------------|-----------|--------------|
