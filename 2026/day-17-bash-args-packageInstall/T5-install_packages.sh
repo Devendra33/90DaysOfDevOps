@@ -34,7 +34,7 @@ do
                 systemctl is-active "$i"
         else
                 echo "$i is Not installed, preparing for installation"
-                apt-get install "$i"
+                apt-get install "$i" -y        # -y is used to automatically answer yes to all prompts and run non-interactively
 
         fi
 done
