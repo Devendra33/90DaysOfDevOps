@@ -1,39 +1,60 @@
+# Day 18 – System Information Scripts
 
-### Task 1: Basic Functions
+## Task 1: Basic Functions
+**Script:** `T1-functions.sh`
 
-Refer Script - T1-functions.sh
-Output of Command:
+### Notes
+- Create the script and make it executable: `touch T1-functions.sh && chmod u+x T1-functions.sh`
+- Execute the script to see basic function usage.
 
+### Output
 ![alt text](image.png)
 
+---
 
-### Task 2: Functions with Return Values
+## Task 2: Functions with Return Values
+**Script:** `T2-disk_check.sh`
 
-Refer Script - T2-disk_check.sh
-Output of Command:
+### Notes
+- Create the script and make it executable: `touch T2-disk_check.sh && chmod u+x T2-disk_check.sh`
+- Run the script to verify return values and disk checks.
 
+### Output
 ![alt text](image-1.png)
 
+---
 
-### Task 3: Strict Mode — `set -euo pipefail`
+## Task 3: Strict Mode — `set -euo pipefail`
+**Script:** `T3-strict_demo.sh`
 
-Refer Script - T3-strict_demo.sh [Read the code here]
-Output of Command:
+### Notes
+- Create the script and make it executable: `touch T3-strict_demo.sh && chmod u+x T3-strict_demo.sh`
+- The script demonstrates safer execution using strict mode.
 
+### Output
 ![alt text](image-2.png)
 
+---
 
-### Task 4: Local Variables
+## Task 4: Local Variables
+**Script:** `T4-local_demo.sh`
 
-Refer Script - T4-local_demo.sh
-Output of Command:
+### Notes
+- Create the script and make it executable: `touch T4-local_demo.sh && chmod u+x T4-local_demo.sh`
+- Run it to see how local variable scope works inside functions.
 
+### Output
 ![alt text](image-3.png)
 
+---
 
-### Task 5: Build a Script — System Info Reporter
+## Task 5: Build a Script — System Info Reporter
+**Script:** `T5-system_info.sh`
 
-Refer Script - T5-system_info.sh
-Output of Command:
+### Notes
+- Create the script and make it executable: `touch T5-system_info.sh && chmod u+x T5-system_info.sh`
+- This script combines functions and system checks to produce a summary report.
 
+### Output
 ![alt text](image-4.png)
+
