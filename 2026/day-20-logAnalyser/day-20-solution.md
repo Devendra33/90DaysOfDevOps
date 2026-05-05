@@ -1,5 +1,13 @@
-#!/bin/bash
 
+### Pre-requisites
+
+Create a sample log file using sample_logs_generator.sh
+vim sample_logs_generator.sh
+chmod u+x sample_logs_generator.sh 
+./sample_logs_generator.sh /home/ubuntu/day20/sample.log 1000
+
+
+### Task 1: Input and Validation
 
 # check if argument passed is empty or not
 if [ -z $1 ]
@@ -18,21 +26,24 @@ else
         exit 1
 fi
 
+### Task 2: Error Count
+
 # Count the number of error logs in the file
+
 count_errors=$( cat $file | awk '/ERROR/ || /Failed/' | wc -l )
 echo "Total Errors logs found - $count_errors"
 
-# Print the critical messages with line number
-critical=$( awk '/CRITICAL/ { print "Line--" NR ": " $0 }' $file )
+### Task 3: Critical Events
 
-# Print the top 5 most common error messages
-top_error=$( awk '/ERROR/ { print $0 }' $file | uniq -c | sort -k1 -r | head -n 5 )
+awk '/CRITICAL/ { print "Line--" NR ": " $0 }' $file
+
+### Task 4: Top Error Messages
+awk '/ERROR/ { print $0 }' sample.log | uniq -c | sort -k1 -r | head -n 5
 
 ### Task 5: Summary Report
-# Generate report
 
-total_lines=$(wc -l < $file)
-error_count=$( cat $file | awk '/ERROR/ || /Failed/' | wc -l )
+See the full code in log_analyzer.sh.
+
 {
 echo "===== Log Analysis Report ====="
 echo "Date of Analysis : $(date)"
@@ -50,5 +61,4 @@ echo "$critical"
 
 } > "/home/ubuntu/day20/log_report_$(date +%Y-%m-%d).txt"
 
-
-echo "Log file created successfully with name log_report_$(date +%Y-%m-%d).txt"
+![alt text](image.png)
