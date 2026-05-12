@@ -1,46 +1,67 @@
+# Day 22 - Git Basics & Workflow
+
 ## Challenge Tasks
 
 ### Task 1: Install and Configure Git
 
-Command used:
-    git --version
-    git config --global user.name "Devendra"
-    git config --global user.email "devendrgohare16@gmail.com"
-    git config --list
+Commands used:
+```bash
+git --version
+git config --global user.name "Devendra"
+git config --global user.email "devendrgohare16@gmail.com"
+git config --list
+```
 
-![alt text](image.png)
+![Configuration Output](image.png)
 
 ### Task 2: Create Your Git Project
 
-![alt text](image-1.png)
+![Git Project Setup](image-1.png)
 
 ### Task 3: Create Your Git Commands Reference
 
-Created a file git-commands.md and pasted contents of my git command file in the repo that I created locally in linux EC2 instance
+Created a file `git-commands.md` with contents of git command reference file in the repo that I created locally in a Linux EC2 instance.
 
 ### Task 4: Stage and Commit
 
-![alt text](image-2.png)
+![Staging and Commit](image-2.png)
 
 ### Task 5: Make More Changes and Build History
 
-![alt text](image-3.png)
+![Commit History](image-3.png)
 
 ### Task 6: Understand the Git Workflow
-Answer these questions in your own words (add them to a `day-22-notes.md` file):
-1. What is the difference between `git add` and `git commit`?
-    Ans-1 - git add sends files to staging area while git commit creates log/ hash values that captures file versions
 
-2. What does the **staging area** do? Why doesn't Git just commit directly?
-    Ans-2 - staging area selects the files which needed to be get commited. 
+Answers to key Git workflow questions:
 
-3. What information does `git log` show you?
-    Ans-3 - Gives the history of all the commit logs with details of users when commited them and we can also see the change history in github
+#### 1. What is the difference between `git add` and `git commit`?
 
-4. What is the `.git/` folder and what happens if you delete it?
-    Ans-4 - it stores the all the importand information which is used to manage the VCS. Deleting .git/ does NOT delete your actual project files. It only removes Git tracking/history (We cannot recover it again).
+`git add` sends files to the staging area, while `git commit` creates log entries with hash values that capture file versions. `git add` prepares files for commit, and `git commit` records them permanently in the Git history.
 
-5. What is the difference between a **working directory**, **staging area**, and **repository**?
-    Ans-5 - Working directory - folder/ directly we are currently on. we can see it using pwd.
-            staging area - staging area selects the files which needed to be get commited.
-            repository - A folder which contain .git file. can be created using git init command.
+#### 2. What does the **staging area** do? Why doesn't Git just commit directly?
+
+The staging area allows you to select which files need to be committed. This provides flexibility to:
+- Commit only relevant changes
+- Review changes before committing
+- Organize logical groups of changes
+
+Direct commits would not allow selective file inclusion.
+
+#### 3. What information does `git log` show you?
+
+`git log` displays the history of all commits with details including:
+- Commit hash/ID
+- Author name and email
+- Commit date and time
+- Commit message
+- Change history that can also be viewed on GitHub
+
+#### 4. What is the `.git/` folder and what happens if you delete it?
+
+The `.git/` folder stores all important Git information used to manage version control (commits, branches, history, etc.). Deleting `.git/` does NOT delete your actual project files—it only removes Git tracking and history, which cannot be recovered.
+
+#### 5. What is the difference between a **working directory**, **staging area**, and **repository**?
+
+- **Working Directory**: The folder/directory you're currently in. You can view it using `pwd`. This is where you edit files.
+- **Staging Area**: Selects the files that need to be committed. Files are moved here using `git add`.
+- **Repository**: A folder containing the `.git` file. Created using `git init` command. Stores all Git history and metadata.
