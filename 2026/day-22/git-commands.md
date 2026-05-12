@@ -48,7 +48,7 @@ Shows all branches present in the repository. The current branch is marked with 
 Creates a new branch. The branch logs will reference the current branch.
 
 **`git branch -D <branchname>`**
-Deletes a branch.
+Deletes a branch. you should be not be switched in to the branch that you are deleting
 
 ### Switching Branches
 
