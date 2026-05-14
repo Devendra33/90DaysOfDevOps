@@ -130,3 +130,4 @@ Refer to: `D:\DevOpsTrain\90DaysOfDevOps\2026\day-22-gitBasics\git-commands.md` 
 
 - **What can go wrong with cherry-picking?**
   - If the target branch already changed the same lines, conflicts may occur during cherry-pick.
+  - watch this youtube video to resolve Merge conflict - https://youtu.be/aUeNbpSkY8k
