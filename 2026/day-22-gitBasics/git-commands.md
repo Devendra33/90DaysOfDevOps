@@ -154,7 +154,10 @@ Hides the current directory work of a branch. and we can switch to another branc
 list all the stashs.
 
 **`git stash pop`**
-Restores the hidden work of the branch.
+Restores the hidden work of the branch. No copy remains in stashing stack.
+
+**`git stash apply`**
+Restores the hidden work of the branch. also 1 copy of stash is remain in the stashing stack.
 
 **`git stash clear`**
 delete the stash entry. all the entries
