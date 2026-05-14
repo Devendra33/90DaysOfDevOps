@@ -62,6 +62,9 @@ Shows all branches present in the repository. The current branch is marked with 
 **`git branch <branchname>`**
 Creates a new branch. The branch logs will reference the current branch.
 
+**`git branch -m <old-branchname> <new-branchname>`**
+Renames a branchname (does not rename on portal - it will create new renamed branch and old branch name will also be prsent)
+
 **`git branch -D <branchname>`**
 Deletes a branch. you should be not be switched in to the branch that you are deleting
 
@@ -75,6 +78,10 @@ Creates a new branch and immediately switches to it.
 
 **`git merge <branchname>`**
 if we are present inside main branch and then runs 'git merge dev', then dev branch will be merged with main branch.
+
+**`git merge --squash <branchname>`**
+if we are present inside main branch and then runs 'git merge dev', then dev branch will be merged with main branch. with squashing.
+squash means if we have multiple commits and want to combine them abd create a single commit while merging.
 
 ---
 
@@ -150,11 +157,14 @@ list all the stashs.
 Restores the hidden work of the branch.
 
 **`git stash clear`**
-delete the stash entry.
+delete the stash entry. all the entries
+
+**`git stash drop`**
+delete the stash entry. only the latest stash entry.
 
 ---
 
-## Rebase and Cherry Pick
+## Rebase and Cherry Pick   
 
 **`git rebase origin/main`**
 If local and remote branches becomes divergent branchs then use above. it make all the commit in one clean readable history line (works on same branch)
@@ -164,3 +174,19 @@ If local and remote branches becomes divergent branchs then use above. it make a
 
 **`git cherry-pick <commit id>`**
 We can take specfic commit from another branch.
+
+---
+
+## Tagging  
+
+**`git tag`**
+List all tags.
+
+**`git tag <name> <commit-id>`**
+Create a tag for specific commit only locally.
+
+**`git tag -a <name> <commit-id>`**
+Create a annotated tag for specific commit only locally.
+
+**`git tag -d <name>`**
+Remove a tag from local repo.
