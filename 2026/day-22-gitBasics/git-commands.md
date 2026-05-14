@@ -35,6 +35,21 @@ Displays the history of all commit logs.
 
 *Best practice: `git log --oneline`* - Shows commits in a condensed format.
 
+**`git log --graph`**
+Displays the history of all commit logs. with lines look slighty better but not that useful.        
+
+**`git diff HEAD`**
+Compare working directory with (Head) last commit
+
+**`git diff --staged`**
+Compare staged changes with with (Head) last commit
+
+**`git blame <file>`**
+shows who modified the file line by line.
+
+**`git show <commit-id>`**
+shows details about the commit. what was modified and by whom.
+
 ---
 
 ## Branches
@@ -50,13 +65,16 @@ Creates a new branch. The branch logs will reference the current branch.
 **`git branch -D <branchname>`**
 Deletes a branch. you should be not be switched in to the branch that you are deleting
 
-### Switching Branches
+### Switching/Merge Branches
 
 **`git checkout <branchname>`**
 Switches to a different branch.
 
 **`git checkout -b <branchname>`**
 Creates a new branch and immediately switches to it.
+
+**`git merge <branchname>`**
+if we are present inside main branch and then runs 'git merge dev', then dev branch will be merged with main branch.
 
 ---
 
@@ -105,9 +123,44 @@ Sets the global email for Git commits.
 **`git config --list`**
 Displays all currently configured Git credentials.
 
+---
 
+## Undo Changes
 
+**`git reset <commit-id>`**
+Reset the Current branch to specified commit and discards all the changes to local.
 
+**`git restore <file>`**
+Restores the file to from the last commit. has three imp flags --hard/ --soft/ --mixed.
 
+**`git commit --amend -m "new message"`**
+Change the message of last commit. (imp DO NOT CHANGE IF THE LAST COMMIT IS PRESENT ON REMOTE BRANCH - to avoid issues). only use message is wrong in local branch.
 
+---
 
+## Stashing
+
+**`git stash`**
+Hides the current directory work of a branch. and we can switch to another branch to work on without adding or commiting the changes.
+
+**`git stash list`**
+list all the stashs.
+
+**`git stash pop`**
+Restores the hidden work of the branch.
+
+**`git stash clear`**
+delete the stash entry.
+
+---
+
+## Rebase and Cherry Pick
+
+**`git rebase origin/main`**
+If local and remote branches becomes divergent branchs then use above. it make all the commit in one clean readable history line (works on same branch)
+
+**`git pull origin main --rebase`**
+If local and remote branches becomes divergent branchs then use above. it make all the commit in one clean readable history line (work on different branch - example I created a feature branch from main and now I want to changes of orgin main in my feature branch)
+
+**`git cherry-pick <commit id>`**
+We can take specfic commit from another branch.
