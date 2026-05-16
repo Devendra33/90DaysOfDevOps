@@ -93,8 +93,7 @@ Sharing my progress and learning journey through GitHub and LinkedIn.
 
 ## 🤝 Connect With Me
 
-* GitHub: <your-github-link>
-* LinkedIn: <your-linkedin-link>
+* LinkedIn: https://www.linkedin.com/in/devendra-gohare/
 
 ---
 
