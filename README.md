@@ -1,130 +1,101 @@
-# 🚀 90DaysOfDevOps
-### Learn • Build • Practice • Become Job-Ready
+# 🚀 90DaysOfDevOps Journey
 
-Welcome to **90DaysOfDevOps**, a structured and hands-on DevOps challenge by **TrainWithShubham**.
+## 👨‍💻 About Me
 
-This repository is designed to help you **build real DevOps skills step by step in 90 days** — not by watching endless videos, but by **doing daily tasks**, building projects, and thinking like a **production-ready DevOps engineer**.
+Hi, I'm Devendra Gohare — a DevOps & Cloud enthusiast passionate about automation, infrastructure, CI/CD, Linux, and cloud technologies.
 
-This is not a theory-heavy course.  
-This is a **discipline + execution challenge**.
+This repository documents my hands-on journey through the **#90DaysOfDevOps** challenge, where I practice DevOps concepts daily by building real-world tasks and projects.
 
 ---
 
-## 🎯 What is #90DaysOfDevOps?
+## 🎯 Goal of This Repository
 
-**#90DaysOfDevOps** is a **day-wise DevOps learning challenge** where:
+The goal of this repository is to:
 
-- Every day has **one clear task**
-- Every task has a **real-world DevOps outcome**
-- Every learner builds a **public GitHub proof of work**
-- Every concept is reinforced through **hands-on practice**
-- Learning is aligned with **live classes and recordings**
-
-By the end of 90 days, you will have:
-- Strong DevOps fundamentals
-- Multiple mini-projects
-- One end-to-end DevOps capstone project
-- A GitHub profile that clearly shows consistency
-- Confidence to handle DevOps interviews and production systems
+* Build strong DevOps fundamentals
+* Practice real-world DevOps workflows
+* Improve problem-solving and troubleshooting skills
+* Learn by doing through daily hands-on tasks
+* Maintain consistency and public proof of work
 
 ---
 
-## 🧠 Who Is This For?
+## 🛠 Technologies & Tools
 
-This challenge is ideal for:
+Throughout this challenge, I am working with:
 
-- Students and freshers entering DevOps or Cloud
-- Working professionals switching to DevOps / SRE / Cloud roles
-- Developers who want to understand infrastructure and CI/CD
-- Anyone who believes **consistency beats talent**
-
-No prior DevOps experience is required.  
-**Commitment is mandatory.**
+* Linux
+* Shell Scripting
+* Git & GitHub
+* Docker
+* Kubernetes
+* AWS & Azure
+* Terraform
+* Jenkins
+* GitHub Actions
+* Networking
+* Monitoring & Observability
+* CI/CD Pipelines
 
 ---
 
-## 🗂 Repository Structure
+## 📅 Challenge Structure
 
-```
-90DaysOfDevOps/
-│
-├── README.md
-├── CONTRIBUTING.md
-├── LICENSE
-├── .gitignore
-│
-├── scripts/
-│   └── helper-scripts.sh
-│
-├── day-01/
-│   └── README.md
-├── day-02/
-│   └── README.md
-├── ...
-├── day-90/
-│   └── README.md
+```bash
+day-01/
+day-02/
+day-03/
+...
+day-90/
 ```
 
----
+Each folder contains:
 
-## 📅 How the Challenge Works
-
-- **One day = one task**
-- Tasks are aligned with **live classes**
-- Live class days focus on **core concepts**
-- Weekdays focus on **practice and reinforcement**
-- Daily commits are encouraged
-
-Even **30–60 minutes per day** is enough if done honestly.
+* Notes
+* Commands
+* Hands-on tasks
+* Practice exercises
+* Real-world learning
 
 ---
 
-## 🛠 What You Will Learn
+## 📌 Why This Challenge?
 
-- Linux fundamentals and troubleshooting
-- Shell scripting and automation
-- Networking basics for DevOps
-- Git and GitHub workflows
-- Docker and containerization
-- AWS core and advanced services
-- CI/CD using Jenkins, GitHub Actions, GitLab
-- DevSecOps fundamentals
-- Kubernetes, Helm, ArgoCD
-- Terraform and Ansible
-- Observability with Grafana, Prometheus, OpenTelemetry
-- End-to-end DevOps project
+I believe consistency and practical implementation are the fastest ways to grow in DevOps.
+
+This repository represents:
+
+* Daily learning
+* Discipline
+* Problem-solving
+* Continuous improvement
 
 ---
 
-## 📦 How to Participate
+## 🌱 Current Focus
 
-1. Fork this repository
-2. Clone your fork
-3. Navigate to the current `day-XX` folder
-4. Complete the task
-5. Commit and push your work
-
----
-
-## 🌍 Learn in Public
-
-Share your progress on LinkedIn:
-
-```
-#90DaysOfDevOps
-#DevOpsKaJosh
-#TrainWithShubham
-```
+* DevOps Engineering
+* Cloud Infrastructure
+* Automation
+* CI/CD
+* Infrastructure as Code
+* Kubernetes & Observability
 
 ---
 
-## ❤️ Final Note
+## 📈 Learning in Public
 
-DevOps is not about tools.  
-It is about **ownership, reliability, and consistency**.
+Sharing my progress and learning journey through GitHub and LinkedIn.
 
-One day at a time.  
-One commit at a time.
+#90DaysOfDevOps #DevOps #Cloud #Linux #Automation #Terraform #Kubernetes
 
-Happy Learning  
-**TrainWithShubham**
+---
+
+## 🤝 Connect With Me
+
+* GitHub: <your-github-link>
+* LinkedIn: <your-linkedin-link>
+
+---
+
+⭐ Thanks for visiting my repository!
