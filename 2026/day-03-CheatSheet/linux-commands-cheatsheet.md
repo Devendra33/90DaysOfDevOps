@@ -17,7 +17,7 @@
 
 ### File System
 - **ls**: List files and folders in the current working directory (`pwd`).
-  - **pro tip:** use `ls -altS` -a: show hidden, -l: long listing, -t (Sort by modification time), -S (Sort by file size).
+  - **pro tip:** use `ls -altSh` -a: show hidden, -l: long listing, -t (Sort by modification time), -S (Sort by file size), -h (human readable form converts kb to Mbs/Gbs)
   - **pro tip:** use `ls (foldername) -R` to view folder recursively.
 
 - **cd**: Change directories.
@@ -61,7 +61,7 @@
 
 - **sort**: Sort file contents alphabetically.
   - example: `sort test.txt`
-  - **pro tip:** use to sort table output based on a column use `sork -k3` k3 means sort according to 3rd column.
+  - **pro tip:** use to sort table output based on a column use `sork -k3 -r` k3 means sort according to 3rd column. -r means Decendening order.
 
 - **wc**: Word count.
   - flags: `-l` count lines, `-w` count words

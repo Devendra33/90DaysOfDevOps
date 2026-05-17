@@ -7,8 +7,8 @@
 - **/tmp** - Temporary files
 
 ## Additional Directories (Good to Know)
-- **/bin** - Essential command binaries
-- **/usr/bin** - User command binaries
+- **/bin** - Essential command user binaries, contains normal user level commands
+- **/sbin** - system binaries, contains administrator level commands
 - **/opt** - Optional/third-party applications, contains the source code
 
 ## Finding the Largest Log File in /var/log
@@ -51,8 +51,8 @@ First, check if the service is available:
 - **systemctl status nginx**
 
 - **journalctl -u nginx** (To see the logs)
-- **journalctl -u nginx -n 10** (To see the LAST 10 logs)
-- **journalctl -u nginx -f** (To see the real-time logs, same as tail -f)
+- **journalctl -u nginx | tail -n 10** (To see the LAST 10 logs)
+- **journalctl -u nginx | tail -f** (To see the real-time logs, same as tail -f)
 - **journalctl -u nginx > log.txt** (To save the log in a file and share where it concerns)
 
 ### Scenario 4: File Permissions Issue

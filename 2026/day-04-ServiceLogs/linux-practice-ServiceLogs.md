@@ -12,6 +12,8 @@
 
 ### Controlling the Service with systemd
 
+**IMPORTANT NOTE:** : `systemctl enable` and `systemctl disable` These commands are used with systemd to control whether a service starts automatically during system Restart/ reboot.
+
 **systemctl status nginx**
 ![alt text](image.png)
 
