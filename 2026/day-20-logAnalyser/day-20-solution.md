@@ -35,14 +35,14 @@ echo "Total Errors logs found - $count_errors"
 
 ### Task 3: Critical Events
 
-awk '/CRITICAL/ { print "Line--" NR ": " $0 }' $file 
+awk '/CRITICAL/ { print "Line--" NR ": " $0 }' $file  # NR contains index number of Rows like 0,1,2....
 
 ### Task 4: Top Error Messages
 awk '/ERROR/ { print $0 }' sample.log | uniq -c | sort -k1 -r | head -n 5 
 
 ### Task 5: Summary Report
 
-See the full code in log_analyzer.sh. 
+See the full code in **log_analyzer.sh** 
 
 { \
 echo "===== Log Analysis Report =====" \
