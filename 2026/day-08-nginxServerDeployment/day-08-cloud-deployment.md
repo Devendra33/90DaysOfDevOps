@@ -46,7 +46,7 @@ Switch to the local machine terminal and run `scp` (secure copy):
 **Note:** use -r to copy the entire folder from 1 place to another.
 
 ```bash
-scp -i <privatekey> user@remote_ip:/path/to/remote/file /path/to/local/destination
+`scp -i <privatekey> user@remote_ip:/path/to/remote/file(source) /path/to/localfolder (destination)`
 ```
 
 **Example:**
@@ -54,7 +54,7 @@ scp -i <privatekey> user@remote_ip:/path/to/remote/file /path/to/local/destinati
 ```bash
 scp -i "serverkey.pem" ubuntu@ec2-3-87-135-165.compute-1.amazonaws.com:/home/ubuntu/nginx-logs.txt .
 ```
-**Note:** **. Means** copy to current working directory in local.
+**Note:** **"." Means** copy to current working directory in local.
 
 ![alt text](image-4.png)
 
