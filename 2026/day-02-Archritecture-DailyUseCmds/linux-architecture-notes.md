@@ -13,8 +13,8 @@ It provides better security and stability by preventing applications to intract 
 ### Linux Architechture
 ![alt text](image-1.png)
 
-**Application -** client user which interacts with shell \
-**Shell-**  it interacts with kernal 4
+**Application -** client user which interacts with shell. \
+**Shell-**  it interacts with kernal.
 ** **
 ** **
 ### How processes are created and managed
@@ -28,25 +28,25 @@ It provides better security and stability by preventing applications to intract 
 
 - **Service Management:** It starts, stops, and restarts background services (daemons), often on-demand to speed up boot times. Using **systemctl** \
 **Dependency Tracking:** It starts services in parallel, using dependency-based logic to ensure services start only when needed. \
-**Logging and Journaling:** Provides systemd-journald, a centralized system logging utility. \
-Hardware and Mount Management: It manages device mounting and tracks processes using Linux control groups (cgroups), using **journalctl -u (serviceName)** command
+**Logging and Journaling:** Provides systemd-journald, a centralized system logging utility, using **journalctl -u (serviceName)** command \
+**Hardware and Mount Management:** It manages device mounting and tracks processes, Generally on /mnt folder.
 
 ## Explain **process states** (running, sleeping, zombie, etc.)
 
 **Process States:** 
- - Running (R) - The process is currently executing \
- - Stopped (S)- Process is terminated \
- - Zomibe(Z) -is a process that has completed its execution but still has an entry in the system's process table. It is effectively "dead" but hasn't been removed from the system because its parent process has not yet read its exit status.
+ - **Running (R)** - The process is currently executing \
+ - **Stopped (S)** - Process is terminated \
+ - **Zomibe(Z)** -is a process that has completed its execution but still has an entry in the system's process table. It is effectively "dead" but hasn't been removed from the system because its parent process has not yet read its exit status.
 
 ## List **5 commands** you would use daily
 
 **I found this 5 commands very usefull:**
 
-cd \
-ls \
-mkdir \
-touch \
-grep
+**cd** \
+**ls** \
+**mkdir** \
+**touch** \
+**grep**
 
 
 
