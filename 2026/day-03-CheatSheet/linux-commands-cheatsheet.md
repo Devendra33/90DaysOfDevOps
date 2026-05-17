@@ -1,47 +1,69 @@
 ## Top Commands That We Use in Linux Day to Day
 
 ### Daily usage
-- **man**: Help system for each command
-- **hostname**: Show the server name (**hostname -i** shows the server private ip)
-- **whoami**: Show the current user
-- **which**: Show the path of the command being used
-- **shutdown**: Turn off the server
-- **reboot**: Restart the server
-- **sudo su**: To switch to Root user
+- **man**: Help system for each command.
+
+- **hostname**: Show the server name (**hostname -i** shows the server private ip).
+
+- **whoami**: Show the current user.
+
+- **which**: Show the path of the command being used.
+
+- **shutdown**: Turn off the server.
+
+- **reboot**: Restart the server.
+
+- **sudo su**: To switch to Root user.
 
 ### File System
-- **ls**: List files and folders in the current working directory (`pwd`)
-  - pro tip: use `ls -al` for a detailed view and ls (foldername) -R to view folder recursively.
-- **cd**: Change directories
-- **mkdir**: Create a directory
-  - pro tips:
+- **ls**: List files and folders in the current working directory (`pwd`).
+  - **pro tip:** use `ls -altS` -a: show hidden, -l: long listing, -t (Sort by modification time), -S (Sort by file size).
+  - **pro tip:** use `ls (foldername) -R` to view folder recursively.
+
+- **cd**: Change directories.
+
+- **mkdir**: Create a directory.
+  - **pro tip:**
     1. Use `mkdir -p "<path>/<newFolderName>"` to create nested directories
     2. Use `mkdir file-{1..5}` to create multiple folders at once
     3. Use `rm -rf file-{1..5}` to remove them
-- **touch**: Create a new empty file
-  - pro tip: You can use the same brace expansion style with `touch`
-- **cat**: Display file contents
-  - pro tip: use `cat -b <filename>` to show line numbers
-- **pwd**: Show the current working directory
-- **vim / nano**: Edit files
-  - pro tip: `vim` is more common in industry
-- **rm**: Remove files or folders
-  - pro tip: `rm -rf` removes folders recursively
-- **cp**: Copy files or folders
+
+- **touch**: Create a new empty file.
+  - **pro tip:** You can use the same brace expansion style with `touch file-{1..5}.txt`
+
+- **cat**: Display file contents.
+  - **pro tip:** use `cat -b <filename>` to show line numbers
+
+- **pwd**: Show the current working directory.
+
+- **vim / nano**: Edit files.
+  - **pro tip:** `vim` is more common in industry
+
+- **rm**: Remove files or folders.
+  - **pro tip:** `rm -rf` removes folders recursively and forcefully.
+
+- **cp**: Copy files or folders.
   - syntax: `cp <source> <destination>`
-- **mv**: Move or rename files or folders
+
+- **mv**: Move or rename files or folders.
   - syntax: `mv <source> <destination>`
-- **sudo**: Run a command with superuser privileges
-- **head / tail**: View the top or bottom of a file
+
+- **sudo**: Run a command with superuser privileges.
+
+- **head / tail**: View the top or bottom of a file.
   - use `-n` to display a specific number of lines
-  - pro tip: `tail -f` follows new appended logs
-- **>** and **>>**: Redirect output to a file
+  - **pro tip:** `tail -f` shows new real time appended logs with stuck on file read screen.
+
+- **>** and **>>**: Redirect output to a file.
   - `>` overwrites the file
   - `>>` appends to the file
-  - pro tip: `cmd > /dev/null` suppresses the output
-- **sort**: Sort file contents alphabetically
+  - **pro tip:** `cmd > /dev/null` suppresses the output
+
+- **sort**: Sort file contents alphabetically.
   - example: `sort test.txt`
-- **wc**: Word count
+  - **pro tip:** use to sort table output based on a column use `sork -k3` k3 means sort according to 3rd column.
+
+- **wc**: Word count.
   - flags: `-l` count lines, `-w` count words
 
 ### File Permission Management
@@ -56,48 +78,63 @@
 - `+` adds permissions
 - `-` removes permissions
 
-- **chmod**: Change file permissions
+- **chmod**: Change file permissions.
   - example: `chmod u+rwx <filename>`
   - example: `chmod g-rx <filename>`
-- **chown**: Change the owner of a file or folder
+
+- **chown**: Change the owner of a file or folder.
   - example: `chown <username> <file-or-folder>`
-- **chgrp**: Change the group owner for a file or folder
+  - **pro tip:** it can assign user and group permission at same time using `chown <userName>:<groupName> <filename>`
+  - **pro tip:** it can assign only group permission at same time using `chown :<group> <groupName>`
+
+- **chgrp**: Change the group owner for a file or folder.
   - example: `chgrp <groupname> <file-or-folder>`
-- **newgrp**: Refresh group membership in the current shell
+
+- **newgrp**: Refresh group membership in the current shell.
 
 ### User / Group Management
-- **useradd**: Add a new user
+- **useradd**: Add a new user.
   - use `-m` to create the home directory
-  - use `-s /usr/bin/bash` to set the login shell
-- **usermod**: Modify an existing user
+  - use `-s /usr/bin/bash` to set the login shell.
+
+- **usermod**: Modify name of existing user. aman = new username and devendra is existing user.
   - example: `usermod -l aman devendra`
-- **passwd**: Set or change a user password
+
+- **passwd**: Set or change a user password `passwd <username>`.
+  - example: `passwd <username>`
   - check `/etc/passwd`
   - check encrypted passwords in `/etc/shadow`
-- **su**: Switch to another user
+
+- **su**: Switch to another user.
   - example: `su username`
-- **exit**: Logout from a switched user session
-- **userdel**: Delete a user
-- **groupadd**: Add a new group
-- **gpasswd**: Manage group membership
-  - example: `gpasswd -a username groupname`
-  - example: `gpasswd -d username groupname`
-  - pro tip: `cat /etc/group` to view groups
-  - pro tip: `cat /etc/gshadow` to view encrypted group data
+
+- **exit**: Logout from a switched user session.
+
+- **userdel**: Delete a user.
+  - example: `userdel <username>`
+
+- **groupadd**: Add a new group.
+
+- **gpasswd**: Manage group membership.
+  - example: `gpasswd -a username groupname` to add user to the group.
+  - example: `gpasswd -d username groupname` to remove user from a group.
+  - **pro tip:** `cat /etc/group` to view groups.
+  - **pro tip:** `cat /etc/gshadow` to view encrypted group data.
 
 ### Find and Search
-- **grep**: Global Regular Expression Print - use to find the words in the file
-  - pro tip: use `-i` for case-insensitive search
-  - pro tip: use `-r` for finding word inside folder recursively
+- **grep**: Global Regular Expression Print - use to find the words in the file.
+  - **pro tip:** use `-i` for case-insensitive search
+  - **pro tip:** use `-r` for finding word inside folder recursively
   - examples:
     - `sudo grep -ir Devendra /home`   (gives the path of file in which devendra is present)
     - `grep -i devendra /etc/passwd`
     - `grep -i devendra /etc/passwd /etc/gpasswd`
     - `grep -r devendra /`
-    - `grep '^devendra' /etc/passwd`
-    - `grep 'devendra$' /etc/passwd`
+    - `grep '^devendra' /etc/passwd` (search for the line starts with devendra)
+    - `grep 'devendra$' /etc/passwd` (search for the line ends with devendra)
     - `grep -i devendra /etc/passwd > name.txt`
     - `cat filename | grep "searchString"`
+
 - **find**: Search for files based on conditions such as name, permissions, user, group, size
   - examples:
     - `find /home -name shub.txt`
@@ -107,11 +144,13 @@
     - `find /tmp -size -10M`
     - `find /tmp -size +10M`
 
- - **awk**: it is used to view the file in a column wise manner using a deliminator.
+ - **awk**: it is used to view the file in a column wise manner using a deliminator, Refer **Day 20 - Log Analyser** for pratical.
+
     - `awk -F. '{print $1 $2}' dum.log` (-F. means . is the deliminator, $1 means print 1st column)
     - `awk '/error/ {print $0}' logs.txt` (Prints every line containing the word "error")
     - `awk '{sum += $2} END {print sum}' data.csv` (Adds all values in the second column and prints the total at the end.)
     - `awk '!seen[$0]++' file.txt` (Filters out all duplicate lines from the input)
+    - `awk -F. '{NR>=0 && NR<=5 {print $1 $2}' dum.log` (NR Means Row Number). 
 
  - **sed**: it is used replace text in the file. use -i for replacing case insensitively
     - `sed -i 's/debug/dev/g' dum.log`       
@@ -123,7 +162,7 @@
   - `sudo apt-get install docker.io`
 
 - Un-install/Remove a package on Ubuntu/Debian:
-  - `sudo apt-get remove`
+  - `sudo apt-get remove <packageName>`
 
 - On Red Hat-based systems use `rpm` / `dnf`
 - On CentOS use `yum`
@@ -134,15 +173,18 @@
   - `systemctl status nginx`
   - `systemctl stop nginx`
   - `systemctl start nginx`
+
 - View service logs:
   - `journalctl -u nginx`
 
 ### Memory and Volume Management
-- **top**: Show the top processes
-- **htop**: Interactive process viewer with scrolling
+- **top**: Show the top processes, cannot be used with grep. So we use ps aux | grep.
+    Note - Just good for quick reference of process.
+- **htop**: Interactive process viewer with scrolling, cannot be used with grep. So we use ps aux | grep
+    Note - Same as top command but with a little better interface we can scroll and down.
 - **kill**: Terminate a process
   - example: `kill <PID>`
-  - force kill: `kill -9 <PID>`
+  - force kill: `kill -9 <PID>` (forcefully killed)
 
 - **free -h**: Show memory usage
 - **df -h**: Show disk usage in human-readable format
@@ -151,16 +193,22 @@
 ### Networking
 - **ssh**: Connect to a remote host
   - example: `ssh -i <privatekey> user@publicdomain`
-  - note: remote public keys are stored in `~/.ssh/authorized_keys`
-- **ifconfig**: Show network interfaces and IP addresses
-- **curl ifconfig.me**: Show public ip address of the server
-- **netstat -tuln**: Show listening services and ports
+  - note: local private keys are stored in `home/ubuntu/.ssh/`
+  - note: remote public keys are stored in `home/ubuntu/.ssh/authorized_keys` 
+  - note: ssh key-gen is used to create public and private keys.
+
+- **ifconfig**: Show network interfaces and IP addresses.
+- **hostname -i** shows the server private ip.
+- **curl ifconfig.me**: Show public ip address of the server.
+- **netstat -tulnp**: Show listening services and ports (Alternative Command: ss -tulnp)
 - **nmcli**: NetworkManager CLI
   - example: `nmcli con show`
 - **curl** - we can hit APIs/ urls and gives the response. -X is used to send the GET/POST Requests.
 - **wget** - used to down file from web. examples photos, files, etc.
 
 ### Automation
-- **cron**: Schedule recurring tasks with cron jobs
+- **cron**: Schedule recurring tasks with cron jobs, use `crontab -e` for creating schedule
+  Note: Ask gpt or corntab guru website to create a cron expression. Refer **Day-19-logBackup_Rotation** for practical usage.
+
 - **env**: Show environment variables
-  - note: exported variables disappear when the shell exits unless saved in `~/.bashrc`
+  - note: exported variables disappear when the shell exits unless saved in `~/.bashrc` (~/ means home/ubuntu).
