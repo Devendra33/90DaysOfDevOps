@@ -152,7 +152,7 @@ set -eou pipefail
 os()
 {
         echo "==========hostname and OS info==========="
-        host=$( hostname )
+        host=$( hostname )          # we can save output any linux command in variable using $() syntax.
         echo "Hostname: $host"
         os=$(cat /etc/os-release | awk 'NR==2')
         echo "OS Version: $os"
