@@ -34,8 +34,8 @@ It provides better security and stability by preventing applications to intract 
 ## Explain **process states** (running, sleeping, zombie, etc.)
 
 **Process States:** 
- - **Running (R)** - The process is currently executing \
- - **Stopped (S)** - Process is terminated \
+ - **Running (R)** - The process is currently executing.
+ - **Stopped (S)** - Process is terminated.
  - **Zomibe(Z)** -is a process that has completed its execution but still has an entry in the system's process table. It is effectively "dead" but hasn't been removed from the system because its parent process has not yet read its exit status.
 
 ## List **5 commands** you would use daily
