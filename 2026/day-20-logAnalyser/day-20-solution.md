@@ -12,10 +12,10 @@ chmod u+x sample_logs_generator.sh
 # check if argument passed is empty or not
 if [ -z $1 ] \
 then \
-        echo "No argument is passed. please pass an argument" \
-        echo "Useage - $0 <logfilepath>" \
-        exit 1 \
-fi \
+                echo "No argument is passed. please pass an argument" \
+                echo "Useage - $0 <logfilepath>" \
+                exit 1 \
+fi 
 
 if [ -f $1 ] \
 then \
@@ -24,7 +24,7 @@ then \
 else \
         echo "file does not exists. please file a valid file path" \
         exit 1 \
-fi \
+fi
 
 ### Task 2: Error Count
 
