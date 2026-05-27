@@ -1,0 +1,73 @@
+services:
+    app:
+      build: .
+      container_name: myapp
+      restart: always
+      ports:
+        - "5000:5000"
+      environment:      # we know all the environment variables from app.py file 
+        DB_HOST: db     # it expects a host name which docker internal DNS works on, if we do db:3306 then app will look for actaul host whose name is "db:3306" which is wrong.
+        DB_USER: root
+        DB_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+        DB_NAME: ${MYSQL_DATABASE}
+
+        REDIS_HOST: cache
+      networks:
+        - frontend
+        - backend
+
+      depends_on:
+        cache:
+          condition: service_started
+        db:
+          condition: service_healthy
+      labels:
+        managedby: "docker-compose"
+        createdby: "Dev"
+
+    db:
+      image: mysql:8
+      container_name: mysqldb
+      restart: always
+      environment:
+        MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+        MYSQL_DATABASE: ${MYSQL_DATABASE}
+
+      networks:
+        - backend
+
+      volumes:
+        - mysql_data:/var/lib/mysql
+
+      healthcheck:
+        test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p$${MYSQL_ROOT_PASSWORD}"]
+        interval: 10s
+        timeout: 5s
+        retries: 5
+
+      labels:
+        managedby: "docker-compose"
+        createdby: "Dev"
+
+    cache:
+      image: redis
+      container_name: myredis
+      restart: always
+      networks:
+        - backend
+        
+      labels:
+        managedby: "docker-compose"
+        createdby: "Dev"
+
+volumes:
+  mysql_data:
+
+networks:
+  frontend:
+    driver: bridge
+  backend:
+    driver: bridge
+  
+
+
