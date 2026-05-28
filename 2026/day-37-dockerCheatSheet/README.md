@@ -44,8 +44,8 @@ Answer from memory, then verify:
 
 ## Build Your Docker Cheat Sheet
 Create `docker-cheatsheet.md` organized by category:
-- **Container commands** — run, ps, stop, rm, exec, logs
-- **Image commands** — build, pull, push, tag, ls, rm
+- **Container commands** — run, ps, stop, rm, exec, logs, inspect
+- **Image commands** — build, pull, push, tag, ls, rm, history
 - **Volume commands** — create, ls, inspect, rm
 - **Network commands** — create, ls, inspect, connect
 - **Compose commands** — up, down, ps, logs, build
