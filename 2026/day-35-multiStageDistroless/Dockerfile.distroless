@@ -1,0 +1,44 @@
+# Docker Multistage
+# Usage: docker build --no-cache --progress=plain -f Dockerfile.distroless -t myappdistro .
+
+
+# Taking a normal python image
+FROM python:3.14-slim AS builder
+
+# Creating a working Directory
+WORKDIR /app
+
+# Copy all the contents from local to image
+COPY . /app
+
+# Installing all the required packages
+RUN pip install -r requirements.txt --target /app/library
+
+# Now all the contents the we need for distroless image is present above our code is present in /app and all the packages are in /app/library
+
+# Creating the Distroless Image
+
+FROM gcr.io/distroless/python3-debian13 AS deployer
+
+# Creating the working directory for distroless image
+WORKDIR /distro_app
+
+# Copy packages from above image to distro image
+COPY --from=builder /app/library /distro_app/library
+
+# Copy source code from above image to distro image
+COPY --from=builder /app .
+
+# Setting image to use package form distro_app/library folder as all the python package files are present here
+ENV PYTHONPATH=/distro_app/library
+
+# SECURITY BEST PRACTICE: Switch to the built-in nonroot user
+# Always use this USER nonroot in the end of file after copying all the files
+USER nonroot
+
+# Annotating that app will run on port 5000 
+EXPOSE 5000
+
+# Run the application we removed python CMD ["python", "app.py"] 
+# because this distorless image is using entry point ENTRYPOINT["python"] so it directory expects a file name
+CMD ["app.py"]
