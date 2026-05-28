@@ -14,4 +14,5 @@ RUN pip install -r requirements.txt
 # Expose port
 EXPOSE 5000
 
+# Gas On
 CMD ["python", "app.py"]
