@@ -73,3 +73,4 @@ docker system prune
 | Download from remote URLs | No | Yes |
 | Auto-extract local `.tar` archives | No | Yes |
 | Official recommendation | Preferred | Use only when necessary |
+
