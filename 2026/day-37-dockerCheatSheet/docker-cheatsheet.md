@@ -29,6 +29,7 @@
 * `docker network ls` — List all available Docker networks on the host.
 * `docker network inspect <net_name>` — See connected containers and internal IP subnets.
 * `docker network connect <net_name> <container>` — Connect an existing container to a specific network.
+* `docker network disconnect <net_name> <container>` — Disconnect an existing container from specific network.
 
 ## Compose Commands
 * `docker compose up -d` — Start all services in the background defined in `docker-compose.yml`.
@@ -49,3 +50,6 @@
 * `EXPOSE <port>` — Informational annotation indicating which port the application listens on at runtime.
 * `CMD ["args"]` — Default arguments passed to the entrypoint executable; overridden by runtime arguments.
 * `ENTRYPOINT ["executable"]` — Configures the main command that will execute when the container boots up.
+
+![alt text](image.png)
+![alt text](image-1.png)
