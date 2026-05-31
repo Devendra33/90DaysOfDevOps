@@ -1,0 +1,32 @@
+server:
+  name: myserver
+  ip: 192.168.122.10
+  port: 8080
+
+Database:
+  host: sql
+  name: mysqldb
+  credentials:
+    user: root
+    password: Test@123
+
+# Literal Block Scalar (|) - It preserves line breaks exactly as written
+startup_script_literal: |
+  echo "Starting application"
+  cd /app
+  python app.py
+
+# output treated as below.
+# echo "Starting application"
+# cd /app
+# python app.py
+
+# Folded Block Scalar (>) - It converts newlines into spaces.
+
+startup_script_folded: >
+  echo "Starting application"
+  cd /app
+  python app.py
+
+# output treated as below.
+# echo "Starting application" cd /app python app.py

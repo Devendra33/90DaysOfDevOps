@@ -1,0 +1,13 @@
+name: "Devendra Gohare"
+role: "DevOps Engineer"
+experience_years: 5
+learning: true
+tools:
+  - "Linux"
+  - "Shell Scripting"
+  - "Docker"
+  - "Networking"
+  - "CICD"
+hobbies:
+  - "Badminton"
+  - "movies"
