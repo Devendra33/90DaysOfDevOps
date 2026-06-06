@@ -71,6 +71,10 @@ Write in your notes: Why does it matter that runners come with tools pre-install
 2. Update your workflow to use `runs-on: [self-hosted, my-linux-runner]`
 3. Trigger it — does it still pick up the job?
 
+Yes, I added label 'Devendra' and Added it. it is picked up by vm.
+
+![alt text](image-2.png) 
+
 Write in your notes: Why are labels useful when you have multiple self-hosted runners?
 
 ---
